@@ -1,12 +1,14 @@
 package org.mfedoriv.sort
 
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.TestInstance
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-internal class SelectionSortTest {
-    private val sorting = SelectionSort()
+internal class InsertionSortTest {
+
+    private val sorting = InsertionSort()
 
     @Test
     fun `Sorting a sorted list (best case)`() {
