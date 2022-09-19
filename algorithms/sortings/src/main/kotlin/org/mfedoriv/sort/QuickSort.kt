@@ -6,11 +6,12 @@ class QuickSort : Sort<ArrayList<Int>> {
 
     }
 //
-//    private fun quickSort(array: ArrayList<Int>): ArrayList<Int> {
+//    private fun quickSort(array: ArrayList<Int>, left: Int, right: Int): ArrayList<Int> {
 //        if (array.size < 2) {
 //            return array
 //        } else {
-//            var pivot = array[(array.size - 1) / 2]
+//            var pivot = array[(left + right) / 2]
+//
 //
 //        }
 //    }

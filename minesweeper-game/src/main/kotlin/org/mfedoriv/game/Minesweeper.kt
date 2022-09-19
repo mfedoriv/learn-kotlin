@@ -1,4 +1,4 @@
-package org.mfedoriv
+package org.mfedoriv.game
 
 import java.io.IOException
 import java.util.*
@@ -14,14 +14,6 @@ enum class Marker(val display: Char) {
 // values to color output text
 const val RED_COLOR = "\u001b[31m" // Everything after this is in red
 const val RESET_COLOR = "\u001b[0m" // Resets previous color codes
-
-
-data class Cell(
-    var isMine: Boolean = false,
-    var isRevealed: Boolean = false,
-    var isFlagged: Boolean = false,
-    var minesAround: Int = 0
-)
 
 class Minesweeper(private val fieldSize: Int, private val minesNumber: Int) {
 
@@ -258,16 +250,4 @@ class Minesweeper(private val fieldSize: Int, private val minesNumber: Int) {
 
         println("——|" + "—".repeat(fieldSize * 2) + "|")
     }
-}
-
-fun main() {
-    val fieldSize = 9
-    var mines = 10
-    if (mines > fieldSize * fieldSize) {
-        println("Mines number is greater than cells number! Changed mines number to field size ($fieldSize)")
-        mines = fieldSize
-    }
-
-    val sweeper = Minesweeper(fieldSize, mines)
-    sweeper.startGame()
 }
